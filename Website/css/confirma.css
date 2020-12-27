@@ -1,0 +1,16 @@
+.confirma{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    font-family:  'Open Sans', sans-serif;
+    color: #fafafa;
+    font-weight: bolder;
+    text-align: center;
+    
+}
+
+.imga{
+    text-align: center;
+}

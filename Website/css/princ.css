@@ -1,0 +1,61 @@
+body{
+    background-color: #eeeeee   ;
+}
+
+.nav-wrapper{
+    float: top;
+    padding-top:0%;
+    font-family:  'Open Sans', sans-serif;
+}
+
+.caixa-esquerda{
+    width: 80vw;
+    padding-left: 20%;
+
+}
+
+a .brand-logo{
+    font-family: 'Open Sans';
+}
+
+.tarefaa{
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    color: #0d47a1;
+    font-size:1.1vw;
+    text-align: center;
+}
+
+.nav-wrapper li{
+    font-weight: bolder;       
+}
+
+
+.input-field bnt{
+    font-family:  'Open Sans';
+    color: #fafafa;
+}
+
+p{
+    font-style: italic;
+    color: #f4511e    ;
+    font-size: large;
+}
+
+
+h5{
+    color: #1565c0;
+}
+
+.centro{
+    text-align:center;
+}
+
+h2{
+    color: #1565c0;
+    text-align: center;
+}
+
+main{
+    padding-top: 1em;
+}
