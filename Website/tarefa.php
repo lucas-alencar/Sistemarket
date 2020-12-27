@@ -8,7 +8,7 @@
 
   if(isset($_POST['titulo_pesq'])){
   $titulo_tarefa = $_POST['titulo_pesq'];
-  $tarefas_encontradas = mysqli_query($connect,"SELECT * FROM tarefas WHERE titulo = '$titulo_tarefa' AND assinatura = '$login ' AND ativo = '2'");
+  $tarefas_encontradas = mysqli_query($connect,"SELECT * FROM tarefas WHERE id = '$titulo_tarefa'");
   $tarefa_unica = $tarefas_encontradas -> fetch_array();
   }
   else{

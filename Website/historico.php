@@ -60,7 +60,7 @@ $acesso = $_POST['usr_hist'];
       ?>     
         <label>
           <li class="collection-item"><a href="#">
-          <input name="titulo_pesq" type="radio" value = "<?php echo $conteudo['titulo']; ?>"/>
+          <input name="titulo_pesq" type="radio" value = "<?php echo $conteudo['id']; ?>"/>
           <span><?php echo $conteudo["titulo"];?></span>
         </label>
       </a></li>
