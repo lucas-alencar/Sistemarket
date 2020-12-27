@@ -6,14 +6,21 @@
     header("location: login.php");
   }
 
-  if(!(isset($_COOKIE['tarefa'])) && !(isset($_POST['titulo_pesq'])) ){
-    header("location:index.php");  
-  }
-
+  if(isset($_POST['titulo_pesq'])){
   $titulo_tarefa = $_POST['titulo_pesq'];
   $tarefas_encontradas = mysqli_query($connect,"SELECT * FROM tarefas WHERE titulo = '$titulo_tarefa' AND assinatura = '$login ' AND ativo = '2'");
   $tarefa_unica = $tarefas_encontradas -> fetch_array();
-
+  }
+  else{
+    if(isset($_COOKIE['tarefa'])){
+      $id_tarefa = $_COOKIE['tarefa'];
+      $todas_tarefas = mysqli_query($connect,"SELECT * FROM tarefas WHERE id = '$id_tarefa'");
+      $tarefa_especifica = $todas_tarefas -> fetch_array();
+    }
+    else{
+      header("location:index.php");  
+    }
+  }
 
 ?>
 
@@ -42,9 +49,17 @@
   <div class="card grey lighten-5">
   <div class="card-panel centro grey lighten-5">
 
-<h3><?php echo $tarefa_unica['titulo'];?></h3>
+<?php 
 
-<h5><?php echo $tarefa_unica['descricao'];?></h5>
+if(isset($_POST['titulo_pesq'])){
+  echo"<h3>".$tarefa_unica['titulo']."</h3>";
+  echo"<h5>".$tarefa_unica['descricao']."</h5>";
+}
+else{
+echo"<h3>".$tarefa_especifica['titulo']."</h3>";
+echo"<h5>".$tarefa_especifica['descricao']."</h5>";
+}
+?>
 
 <br>
 
