@@ -3,11 +3,13 @@ include("db.php");
 $login = $_COOKIE['login'];
 if(isset($_POST['adicionar'])){
     $titulo = $_POST['titulo'];
-    $descricao = $_POST['descricao'];
+    $descricao = "";
+    $descricao =$_POST['descricao'];
     $descricao = $descricao.". ".$login;
+    if(strlen($descricao)>20 && strlen($titulo)>8){
 mysqli_query($connect,"INSERT INTO `tarefas` (`titulo`, `descricao`, `empresa`,`ativo`) VALUES ('$titulo', '$descricao', '1','0')");
 header("location: index.php");
-
+}
 }
 
 ?>

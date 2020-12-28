@@ -69,16 +69,15 @@ echo"<h5>".$tarefa_especifica['descricao']."</h5>";
 <button class='btn orange darken-3 waves-effect' type='submit' name='action'>retornar</button>
 </a>
   <?php
+
     if(!(isset($_POST['titulo_pesq']))){
-      echo "";
-
-
       echo "<a href='tarefa_andamento.php'>";
               echo "<button style= 'float: right;' class='btn waves-effect waves-light' type='submit'>Aceitar tarefa";
                   echo "<i class='material-icons right'>send</i>";
               echo "</button>";
       echo "</a>";
     }
+
   ?>
 
 </p>
